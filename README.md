@@ -3,7 +3,18 @@ TakeABlog is a blogging website for tech people that provides a platform for ind
 ### [Click here](https://www.youtube.com/) to watch the demo of this project
 ## What is TakeABlogs?
 Creating a blog Is an easy task with the help of the TakeABlog resulting best productivity and user interface.
+### Key features
+- Take a blog provides a handy feature of ability to edit the existing text and images easily.
+- TakeABlog provides a chat support which does the perfect job by filling the communication gap between the author and the user which equally results into a better user experience.
+- TakeABlog provides a wide category and filter options to choose one's according to the requirements and interest of the user which reflects a better user experience.
 
+
+### Technology Use for This Project.
+- HTML
+- CSS 
+- Javascript
+- Python 
+- Django
 
 
 

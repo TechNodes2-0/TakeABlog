@@ -13,7 +13,7 @@ Creating a blog Is an easy task with the help of the TakeABlog resulting best pr
 
 
 ## Team of Developers
-- Jayesh Yadav (Team Lead)[NerdyVisky](https://github.com/NerdyVisky)
+- Jayesh Yadav (Team Lead)[JayeshYadav](https://github.com/JayeshYadav99)
 - Nishit Bariya (Co-Lead)[Nishitbariya](https://github.com/Nishitbaria)
 - VinayakVispute(Back-end Developer) [VinayakVispute](https://github.com/VinayakVispute)
 -  yash suthar(Front-end Developer) [yash suthar](https://github.com/Yash636261)

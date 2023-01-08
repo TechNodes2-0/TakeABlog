@@ -1,11 +1,11 @@
 # TakeABlog
 
- <a href="https://hacktoberfest.digitalocean.com/">
+ <a href="https://www.youtube.com/watch?v=sjpRIeGsFSQ">
         <img src="https://github.com/TechNodes2-0/TakeABlog/blob/f2df71496d1cb3a47b67bc5df3203c90c387fea3/media/thumbnail/Take%20a%20Blog.png" width="75%" height: 150px;> 
     </a> 
 
 TakeABlog is a blogging website for tech people that provides a platform for individuals to share their knowledge, experience, and insights about technology.
-### [Click here](https://www.youtube.com/) to watch the demo of this project
+### [Click here](https://www.youtube.com/watch?v=sjpRIeGsFSQ) to watch the demo of this project
 ## What is TakeABlogs?
 Creating a blog Is an easy task with the help of the TakeABlog resulting best productivity and user interface.
 ### Key features

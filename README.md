@@ -35,7 +35,7 @@ pip install –r requirement.txt
 ```
 ### 6. Locate manage.py file and in cmd run
 ```
-python mangage.py runserver
+python manage.py runserver
 ```
 ### For Testing Purpose ID and Password
 ```

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Categories</title>
+</head>
+<body>
+    {% if category_posts %}
+<h1>Categories --</h1>
+<br>
+<h2>{{cats}}</h2>
+<ul>
+{% for item in category_posts %}
+    <br><hr><li><strong><a href="{% url 'article-detail' item.pk %}">{{item.title }}  {{item.category}}</a><br><a href="{% url 'edit_post' item.pk %}">Edit</a><br> - {{ item.author.first_name }}- {{ item.author.last_name }} : {{item.author.email}} --- {{item.post_date}}--- updated : {{ item.last_updated }}</strong> </br>{{ item.body|safe }} <hr></li></hr>
+{% endfor %}
+</ul>
+{% else %}
+<h1> No Post from Categories </h1>
+{{ cats }}
+{% endif %}
+</body>
+</html>

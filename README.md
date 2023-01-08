@@ -13,13 +13,30 @@ Creating a blog Is an easy task with the help of the TakeABlog resulting best pr
 - TakeABlog provides a chat support which does the perfect job by filling the communication gap between the author and the user which equally results into a better user experience.
 - TakeABlog provides a wide category and filter options to choose one's according to the requirements and interest of the user which reflects a better user experience.
 
-## To Run Our website 
--Copy Below Link 
-```bash
-  https//:dmeolink.com
+## Installation 
+### 1 Install python by official way:   
+
+### 2 Then in CMD enter pip install django 
+```
+pip install django
 ```
 
-
+### 3. Open project directly in cmd and locate manage.py file directory
+```
+py -m venv myworld   
+```
+### 4. Then activate the environment
+```
+Myworld\Scripts\activate
+```
+### 5. Then after activating locate requirement.text and run the command
+```
+pip install –r requirement.txt
+```
+### 6. Locate manage.py file and in cmd run
+```
+python mangage.py runserver
+```
 ### Technology Use for This Project.
 - HTML
 - CSS 

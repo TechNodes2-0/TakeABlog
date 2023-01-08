@@ -3,20 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <title>Categories</title>
+    <link rel="stylesheet" href="/static/css/Style.css" />
+
 </head>
 <body>
+    <nav class="nav">
+        <div class="nav-menu flex-row">
+          <div class="nav-brand">
+            <a href="#" class="text-gray">Take A Blogs</a>
+          </div>
+          <div class="toggle-collapse">
+            <div class="toggle-icons">
+              <i class="fas fa-bars"></i>
+            </div>
+          </div>
+          <div>
+            <ul class="nav-items">
+              <li class="nav-link">
+                <a href="{% url 'home' %}">Home</a>
+              </li>
+               <li class="nav-link">
+                  <a href="#">Category</a> 
+              </li>
+              <li class="nav-link">
+                <a href="{% url 'chatbot' %}">chat support</a>
+              </li>
+              {% if user.is_authenticated %}
+              <li class="nav-link">
+                  <a href="{% url 'add_post' %}">Add Post</a>
+              </li>
+              <li class="nav-link">
+                  <a href="{% url 'logout' %}">Logout</a>
+              </li>
+             
+              {% else %}
+              <li class="nav-link">
+                  <a href="{% url 'login' %}">Login</a>
+              </li>
+              <li class="nav-link">
+                  <a href="{% url 'register' %}">Register</a>
+              </li>
+              {% endif %}
+            </ul>
+          </div>
+          <div class="social text-gray">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </nav>
     {% if category_posts %}
 <h1>Categories --</h1>
 <br>
 <h2>{{cats}}</h2>
 <ul>
 {% for item in category_posts %}
-    <br><hr><li><strong><a href="{% url 'article-detail' item.pk %}">{{item.title }}  {{item.category}}</a><br><a href="{% url 'edit_post' item.pk %}">Edit</a><br> - {{ item.author.first_name }}- {{ item.author.last_name }} : {{item.author.email}} --- {{item.post_date}}--- updated : {{ item.last_updated }}</strong> </br>{{ item.body|safe }} <hr></li></hr>
+    <br><hr><li><strong><br> - {{ item.author.first_name }}- {{ item.author.last_name }} : {{item.author.email}} --- {{item.post_date}}--- updated : {{ item.last_updated }}</strong> </br>{{ item.body|safe }} <hr></li></hr>
 {% endfor %}
 </ul>
 {% else %}
 <h1> No Post from Categories </h1>
 {{ cats }}
+{% else %}
+<h1> You Dont belong to this page</h1>
 {% endif %}
 </body>
 </html>

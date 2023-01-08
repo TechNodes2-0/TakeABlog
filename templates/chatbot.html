@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>TechABLOG Chat BOT</title>
+	<link rel="icon" href="/static/chatbot/bot-mini.png" />
+	<link rel="stylesheet" href="/static/chatbot/style.css" />
+	<style>   
+	.container{
+		/* background-image: url(video/1.gif); */
+	}
+	</style>
+    <link rel="stylesheet" href="/static/css/Style.css" />
+
+</head>
+
+<body class="background">
+	<nav class="nav">
+		<div class="nav-menu flex-row">
+		  <div class="nav-brand">
+			<a href="#" class="text-gray">Take A Blogs</a>
+		  </div>
+		  <div class="toggle-collapse">
+			<div class="toggle-icons">
+			  <i class="fas fa-bars"></i>
+			</div>
+		  </div>
+		  <div>
+			<ul class="nav-items">
+			  <li class="nav-link">
+				<a href="{% url 'home' %}">Home</a>
+			  </li>
+			   <li class="nav-link">
+				  <a href="#">Category</a> 
+			  </li>
+			  <li class="nav-link">
+				<a href="{% url 'chatbot' %}">chat support</a>
+			  </li>
+			  {% if user.is_authenticated %}
+			  <li class="nav-link">
+				  <a href="{% url 'add_post' %}">Add Post</a>
+			  </li>
+			  <li class="nav-link">
+				  <a href="{% url 'logout' %}">Logout</a>
+			  </li>
+			 
+			  {% else %}
+			  <li class="nav-link">
+				  <a href="{% url 'login' %}">Login</a>
+			  </li>
+			  <li class="nav-link">
+				  <a href="{% url 'register' %}">Register</a>
+			  </li>
+			  {% endif %}
+			</ul>
+		  </div>
+		  <div class="social text-gray">
+			<a href="#"><i class="fab fa-facebook-f"></i></a>
+			<a href="#"><i class="fab fa-instagram"></i></a>
+			<a href="#"><i class="fab fa-twitter"></i></a>
+			<a href="#"><i class="fab fa-youtube"></i></a>
+		  </div>
+		</div>
+	  </nav>
+	<div id="container" class="container">
+		<div id="chat" class="chat">
+			<div id="messages" class="messages"></div>
+			<input id="input" type="text" placeholder="Say something..." autocomplete="off" autofocus="true" />
+		</div>
+		<img src="/static/chatbot/bot.png" alt="Robot cartoon" height="500vh">
+	</div>
+</body>
+<script type="text/javascript" src="/static/chatbot/index.js" ></script>
+<script type="text/javascript" src="/static/chatbot/constants.js" ></script>
+<script type="text/javascript" src="/static/chatbot/speech.js" ></script>
+
+</html>

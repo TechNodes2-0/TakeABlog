@@ -3,14 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <title>Edit Post</title>
+
+    <link rel="stylesheet" href="/static/css/Style.css" />
+
 </head>
 <body>
-<h1>Edit Post</h1>
+        <nav class="nav">
+        <div class="nav-menu flex-row">
+          <div class="nav-brand">
+            <a href="#" class="text-gray">Take A Blogs</a>
+          </div>
+          <div class="toggle-collapse">
+            <div class="toggle-icons">
+              <i class="fas fa-bars"></i>
+            </div>
+          </div>
+          <div>
+            <ul class="nav-items">
+              <li class="nav-link">
+                <a href="{% url 'home' %}">Home</a>
+              </li>
+               <li class="nav-link">
+                  <a href="#">Category</a> 
+              </li>
+              <li class="nav-link">
+                <a href="{% url 'chatbot' %}">chat support</a>
+              </li>
+              {% if user.is_authenticated %}
+              <li class="nav-link">
+                  <a href="{% url 'add_post' %}">Add Post</a>
+              </li>
+              <li class="nav-link">
+                  <a href="{% url 'logout' %}">Logout</a>
+              </li>
+             
+              {% else %}
+              <li class="nav-link">
+                  <a href="{% url 'login' %}">Login</a>
+              </li>
+              <li class="nav-link">
+                  <a href="{% url 'register' %}">Register</a>
+              </li>
+              {% endif %}
+            </ul>
+          </div>
+          <div class="social text-gray">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </nav>
+      {% if user.is_authenticated %}
+        {% if user.id == post.author.id%}
+        <<h1>Edit Post</h1>
 
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button>Edit</button>
-    </form>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.media }}
+            {{ form.as_p }}
+            <button>Edit</button>
+        </form>
+        
+            {% endif %}
+            
+            {% else %}
+    <h1>You DOnt Belong HEre</h1>
+            {% endif %}
+
 </body>
 </html>

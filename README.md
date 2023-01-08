@@ -37,6 +37,12 @@ pip install –r requirement.txt
 ```
 python mangage.py runserver
 ```
+### For Testing Purpose ID and Password
+```
+Username : Admin
+Password : Admin@2022
+```
+
 ### Technology Use for This Project.
 - HTML
 - CSS 

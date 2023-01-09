@@ -9,6 +9,9 @@ from django.urls import reverse_lazy, reverse
 
 # def homepage(request):
 #     return render(request, 'Core/homepage.html', {})
+def chatbot(request):
+    return render(request,'chatbot.html')
+
 
 def LikeView(request, pk):
     post = get_object_or_404(Post, pk=pk)

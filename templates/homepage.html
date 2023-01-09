@@ -167,7 +167,7 @@
                 <a href="{% url 'article-detail' item.pk %}">{{item.title}}</a>
                 <br /><br />
                 <br>
-                {{% item.body | safe}
+                { item.body |slice:":200"|safe }
                 <a href="{% url 'article-detail' item.pk %}"
                   ><button class="btn post-btn">Read More &nbsp;</button>
                   <!-- ><i class="fas fa-arrow-right"></i -->

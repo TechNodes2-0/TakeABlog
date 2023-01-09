@@ -6,6 +6,7 @@
 
 TakeABlog is a blogging website for tech people that provides a platform for individuals to share their knowledge, experience, and insights about technology.
 ### [Click here](https://www.youtube.com/watch?v=sjpRIeGsFSQ) to watch the demo of this project
+### [Click here](https://jayeshyadav.pythonanywhere.com/) to See Minimum Viable Product
 ## What is TakeABlogs?
 Creating a blog Is an easy task with the help of the TakeABlog resulting best productivity and user interface.
 ### Key features
